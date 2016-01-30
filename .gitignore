@@ -1,0 +1,13 @@
+/.settings/
+/.classpath
+/.factorypath
+/target/
+/.project
+.*.swp
+/servers/*/apps
+/servers/*/logs
+/servers/*/workarea
+/servers/*/tranlog
+/servers/.classCache
+/.apt_generated/
+/build/

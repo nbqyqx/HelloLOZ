@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>InterConnect-LinuxONE</title>
+<link rel="stylesheet" href="css/hello.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+
+	$(function() {
+		var enable = false;
+		var arr = [];	
+		var length = 20;	
+		$("#Start").on("click", function() {
+			if (enable)
+				enable = false;
+			else {
+				arr[0] = 'Starting...\n';
+				for (var i=1;i<length;i++){
+					arr[i] = '';							
+				}
+				enable = true;
+			}
+							
+		});	
+		window.setInterval(function() {
+		if (enable){
+			$.ajax({
+				url : "/LinuxONEService/rest/hello",
+				type : "GET",
+				dataType : "text",
+				success : function(data) {
+					console.debug("SUCCESS");
+					console.debug(data);
+					
+					    var txt = '';
+						for (var i=length-1;i>0;i--){
+							arr[i] = arr[i-1];									
+						}
+						arr[0] = data;
+						for (var i=0;i<length;i++){							
+							txt = txt + arr[i]	+ '\n';				
+						}						
+						document.getElementById('txta').value = txt;
+					
+					
+				},
+				error : function(data) {
+					console.debug("ERROR");
+					console.debug(data);
+					document.getElementById('txta').value = "ERROR";
+				}
+			});
+		}
+		}, 600);	
+		
+	});
+</script>
+</head>
+<body>
+	<section id="wrapper">	
+		<div class="start" id="Start"></div>	
+		<hr/>
+		
+        <textarea class ="txta" id="txta">
+		
+		</textarea>
+	<div class="large-3 columns">
+			<a href="https://www.docker.com/"><img class="logo" src="images/logo.png"></a>
+	</div>	
+	<footer>
+	<a href="/">Urban Code</a>/<a id="built" href="http://wasdev.net">Liberty</a>/<a href="http://www.ibm.com/systems/linuxone/">IBM LinuxONE</a>/<a href="https://www.docker.com/">Docker</a>
+	</footer>
+	</section>
+</body>
+</html>
