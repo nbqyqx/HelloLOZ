@@ -41,31 +41,13 @@ public class BasicResource {
     public String sayHelloJson() {
        
         return "I am LinuxONE!";
-    }
-    
-    
-    @GET
-    @Path("anybodythere")
-    @Produces("text/plain")
-    public String sayHello() {
-       Client client = ClientBuilder.newClient();
-       String url = "http://" + req.getLocalAddr() + ":" + req.getServerPort() + "/" + req.getContextPath()+ "/";
-       StringBuffer sb = new StringBuffer();
-       try{
-    	    for(String comp:list){
-    	    sb.append(client.target( url + comp + "/whoareyou").request().accept(MediaType.TEXT_PLAIN_TYPE).get(String.class) + "\n");
-    	    }      
-       } finally {
-    	   client.close();
-       }
-      
-        return sb.toString();
-    }
+    }    
+
     
     @GET
     @Path("hello")
     @Produces("text/plain")
-    public String buy() {
+    public String sayHelllo() {
       
     	String s = null;
         try {

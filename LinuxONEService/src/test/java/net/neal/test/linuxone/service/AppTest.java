@@ -1,8 +1,9 @@
-package net.neal.LinuxONEService;
+package net.neal.test.linuxone.service;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import net.neal.linuxone.service.BasicResource;
 
 /**
  * Unit test for simple App.
@@ -33,6 +34,8 @@ public class AppTest
      */
     public void testApp()
     {
-        assertTrue( true );
+    	BasicResource resouce = new BasicResource();
+    	
+        assertTrue( resouce.sayHelllo().contains("Hello") );
     }
 }
