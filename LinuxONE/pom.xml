@@ -12,7 +12,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>LinuxONE</name>
+
+  <build>
+      <finalName>HelloWebClient</finalName>
+  </build>
+
+  <name>HelloWebClient</name>
   <url>http://maven.apache.org</url>
 
   <properties>
