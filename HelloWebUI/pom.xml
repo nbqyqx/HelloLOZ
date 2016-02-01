@@ -8,16 +8,16 @@
         <version>0.0.1-SNAPSHOT</version>
   </parent>
     
-  <artifactId>LinuxONE</artifactId>
+  <artifactId>HelloWebUI</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
 
   <build>
-      <finalName>HelloWebClient</finalName>
+      <finalName>HelloWebUI</finalName>
   </build>
 
-  <name>HelloWebClient</name>
+  <name>HelloWebUI</name>
   <url>http://maven.apache.org</url>
 
   <properties>
