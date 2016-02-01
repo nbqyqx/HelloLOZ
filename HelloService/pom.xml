@@ -3,12 +3,17 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>net.neal</groupId>
-  <artifactId>LinuxONEService</artifactId>
+  <artifactId>HelloService</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <build>
       <finalName>HelloService</finalName>
   </build>
+  <parent>
+        <groupId>net.neal</groupId>
+        <artifactId>HelloLOZ</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+  </parent>
   <name>HelloService</name>
   <url>http://maven.apache.org</url>
 

@@ -4,11 +4,11 @@
 
   <parent>
         <groupId>net.neal</groupId>
-        <artifactId>hello.loz</artifactId>
+        <artifactId>HelloLOZ</artifactId>
         <version>0.0.1-SNAPSHOT</version>
   </parent>
     
-  <artifactId>LinuxONE</artifactId>
+  <artifactId>HelloWebUI</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
@@ -17,7 +17,7 @@
       <finalName>HelloWebClient</finalName>
   </build>
 
-  <name>HelloWebClient</name>
+  <name>HelloWebUI</name>
   <url>http://maven.apache.org</url>
 
   <properties>

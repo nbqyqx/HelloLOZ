@@ -11,3 +11,5 @@
 /servers/.classCache
 /.apt_generated/
 /build/
+/.apt_generated/
+/target/
