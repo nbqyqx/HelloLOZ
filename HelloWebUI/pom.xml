@@ -14,7 +14,7 @@
 
 
   <build>
-      <finalName>HelloWebClient</finalName>
+      <finalName>HelloWebUI</finalName>
   </build>
 
   <name>HelloWebUI</name>
