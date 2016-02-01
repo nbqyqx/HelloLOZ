@@ -18,8 +18,9 @@ FROM libertybase
 # copy server.xml for app configuration
 #ADD server.xml /opt/ibm/wlp/usr/servers/defaultServer/
 # copy app to deploy it
-ADD HelloWebClient.war /opt/ibm/wlp8558/usr/servers/linuxoneclient/apps/
+RUN chmod 777 /opt/ibm/wlp/bin/server
+ADD HelloWebClient.war  /opt/ibm/wlp/usr/servers/linuxoneclient/apps/
 # expose container port
 EXPOSE 9080 9443
 # set default run command after start this  container
-CMD ["/opt/ibm/wlp8558/bin/server", "run", "linuxoneclient"]
+CMD ["/opt/ibm/wlp/bin/server", "run", "linuxoneclient"]
