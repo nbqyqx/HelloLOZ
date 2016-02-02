@@ -23,7 +23,7 @@ http {
 			proxy_pass http://helloservice;
 		}
 	
-		location /HelloWebClient {
+		location /HelloWebUI {
 			proxy_pass http://hellowebclient;
 		}
 	}
