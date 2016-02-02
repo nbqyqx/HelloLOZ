@@ -1,0 +1,30 @@
+worker_processes     3;
+error_log            logs/error.log;
+pid                  logs/nginx.pid;
+worker_rlimit_nofile 8192;
+
+events
+{
+worker_connections  2048;
+}
+
+http {
+	upstream helloservice {
+		server lozlnxm.canlab.ibm.com:9081;
+		server lozlnxm.canlab.ibm.com:9082;
+	}
+
+	upstream hellowebclient {
+                server lozlnxm.canlab.ibm.com:9080;
+	}
+	server {
+		listen 80;
+		location /HelloService {
+			proxy_pass http://helloservice;
+		}
+	
+		location /HelloWebClient {
+			proxy_pass http://hellowebclient;
+		}
+	}
+}
